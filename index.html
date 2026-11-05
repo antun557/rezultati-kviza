@@ -311,7 +311,7 @@ function render(s){
   const R=[["Režija","Komuna"],["Scenarij","nitko ne priznaje"],["Kasting","šešir iz 1987."],["Catering","Perić"],["Potrošnja cateringa","Helena"],["Vjerski savjetnik","Jona"],["Drugi vjerski savjetnik","Perić"],["Treći vjerski savjetnik","Leko (nakon treće pive: Cole)"],["Disciplina i zvučni efekti","sestra Danijela"],["Čaj konzultant","Matej (APSOLUTNO)"],["Kontrola kvalitete","Nina (47 kriterija)"],["Ocjenjivački sud","Sabina (2/10)"],["Tarot i duhovi","Veronika"],["Glazba","Salak, „Ne želim biti ovdje, op. 2“"],["Smirivanje situacija","Marta (osim na stolu)"],["Obrve","Sara"],["Stopala","Luka"],["Dramaturg, glumac i kada","Antun"],["Posebna zahvala","Lara"]];
   return `<div class="scr credits"><div class="roll"><p class="logo" style="font-size:40px;margin-bottom:40px">Love Island</p>${R.map(r=>`<div class="r"><small>${esc(r[0])}</small><span>${esc(r[1])}</span></div>`).join("")}<p class="narr" style="margin-top:40px">Svi likovi su stvarni. Sve situacije su izmišljene. Uglavnom.</p></div></div>`;}
  case "end":return `<div class="scr center lg"><div class="heart">♥</div><div class="big"><div class="t">KRAJ.</div></div>
- <p class="narr" style="margin-top:22px">Druga sezona? Ovisi o komuni.</p><button class="again" id="again">Gledaj ispočetka</button></div>`;
+ <p class="narr" style="margin-top:22px">Druga sezona? Ovisi o komuni.</p><button class="again" id="again">Gledaj ispočetka</button><br><a class="again" style="display:inline-block;margin-top:14px;text-decoration:none" href="sezona-2/" onclick="event.stopPropagation()">Sezona 2 →</a></div>`;
  }
 }
 
