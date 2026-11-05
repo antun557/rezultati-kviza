@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120A16">
+<title>Love Island Adria · Sezona 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--noc:#1B1020;--ponoc:#120A16;--sljiva:#2A1B31;--pink:#FF5C93;--koralj:#FF8A6B;--sunce:#FFC93C;--krem:#F4E8EE;--siva:#A8909F}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#0b060d;color:var(--krem);font-family:'DM Sans',system-ui,sans-serif;overflow:hidden}
+.app{position:relative;width:100%;max-width:440px;height:100dvh;margin:0 auto;background:var(--noc);overflow:hidden;user-select:none;-webkit-user-select:none}
+@media (min-width:600px){.app{height:min(900px,94dvh);margin-top:max(3dvh,0px);border-radius:28px;border:1px solid #2e1f35}}
+.top{position:absolute;top:0;left:0;right:0;z-index:5;padding:max(12px,env(safe-area-inset-top)) 16px 0;pointer-events:none}
+.bar{height:3px;background:#3a2840;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--pink);transition:width .3s}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12px;color:var(--siva)}
+.meta button{pointer-events:auto;background:none;border:0;color:var(--siva);font:inherit;font-size:12px;cursor:pointer;padding:4px 0}
+.stage{position:absolute;inset:0;cursor:pointer}
+.scr{position:absolute;inset:0;padding:78px 24px 40px;display:flex;flex-direction:column;animation:fadeIn .35s ease}
+.scr.center{justify-content:center;align-items:center;text-align:center}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.h{font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+.logo{font-family:'Pacifico',cursive;color:var(--pink)}
+.narr{font-style:italic;color:var(--siva);font-size:15px;line-height:1.55;margin:0 0 18px}
+.ln{margin:0 0 16px;animation:lineIn .4s ease both}
+.ln p{font-size:16.5px;line-height:1.5}
+.nm{display:inline-block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;padding:2px 10px;border-radius:20px;margin:0 0 4px}
+.dir{font-style:italic;color:var(--siva);font-size:15px;line-height:1.5}
+@keyframes lineIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.conf{background:var(--ponoc)}
+.conf .lab{font-size:12px;letter-spacing:2.5px;color:var(--pink)}
+.conf .q{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:23px;line-height:1.38;margin-top:auto;margin-bottom:auto;animation:lineIn .6s ease both}
+.tag{align-self:flex-start;margin-left:-24px;border-left:4px solid var(--pink);background:var(--sljiva);padding:8px 18px 8px 16px;margin-bottom:24px;animation:slideR .5s .3s ease both}
+@keyframes slideR{from{transform:translateX(-100%)}to{transform:none}}
+.msg{background:var(--sljiva);border-radius:18px;overflow:hidden;width:100%;animation:pop .5s cubic-bezier(.2,1.6,.4,1) both}
+.msg .hd{border-top:4px solid var(--sunce);padding:12px 16px 0;font-size:12.5px;color:var(--sunce);font-weight:500;display:flex;gap:8px;align-items:center}
+.msg .bd{padding:8px 16px 16px}
+.msg .bd b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:22px;margin-bottom:6px}
+.msg .bd p{font-size:16px;line-height:1.5;color:#E0CFD8}
+@keyframes pop{0%{transform:translateY(-40px) scale(.9);opacity:0}100%{transform:none;opacity:1}}
+.card{border:7px solid var(--pink);border-radius:16px;background:var(--sljiva);padding:12px;width:100%;animation:cardIn .6s ease both}
+@keyframes cardIn{from{transform:rotateY(90deg) scale(.9);opacity:0}to{transform:none;opacity:1}}
+.card .art{height:170px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:64px;margin:8px 0}
+.card .ty{font-size:12.5px;font-weight:500;padding:5px 0;border-top:1px solid #4a3352;border-bottom:1px solid #4a3352;margin-bottom:10px}
+.card .ab{font-size:14px;line-height:1.5;margin-bottom:10px}
+.card .fl{font-size:14px;font-style:italic;color:var(--siva)}
+.card .pt{text-align:right;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;color:var(--koralj);margin-top:6px}
+.big .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1.08;animation:slam .55s cubic-bezier(.2,1.4,.4,1) both}
+.big .s{font-size:16px;color:var(--siva);margin-top:18px;line-height:1.5;animation:fadeIn .5s .5s both}
+@keyframes slam{0%{transform:scale(2.6);opacity:0}60%{transform:scale(.94);opacity:1}100%{transform:scale(1)}}
+.shake{animation:shake .5s .45s both}
+@keyframes shake{0%,100%{transform:none}20%{transform:translate(-6px,3px)}40%{transform:translate(5px,-4px)}60%{transform:translate(-4px,-2px)}80%{transform:translate(3px,4px)}}
+.ttl .ep{background:var(--sljiva);color:#FFB3CC;font-size:13px;font-weight:500;padding:5px 14px;border-radius:20px;animation:fadeIn .5s .5s both}
+.ttl .nm2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;line-height:1.15;margin-top:16px;animation:slam .6s .8s both}
+.hint{position:absolute;bottom:max(18px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font-size:12.5px;color:var(--siva);animation:fadeIn .5s 1.2s both;pointer-events:none}
+.ep-list p{font-size:15px;line-height:1.5;margin-bottom:12px;animation:lineIn .4s ease both}
+.d1{animation-delay:.15s!important}.d2{animation-delay:.3s!important}.d3{animation-delay:.45s!important}.d4{animation-delay:.6s!important}.d5{animation-delay:.75s!important}.d6{animation-delay:.9s!important}.d7{animation-delay:1.05s!important}
+.warn{background:#000}
+.warn .w1{color:var(--sunce);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:4px;font-size:22px;animation:blink 1s steps(2) 3}
+.warn p{font-size:17px;line-height:1.5;margin-top:22px;opacity:0;animation:fadeIn .6s both}
+@keyframes blink{50%{opacity:0}}
+.prod .row{display:flex;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:2px}
+.prod .row span{display:inline-block;opacity:0;animation:drop .5s cubic-bezier(.2,1.6,.4,1) both}
+.prod .row.up span{animation-name:rise}
+@keyframes drop{from{transform:translateY(-120px);opacity:0}to{transform:none;opacity:1}}
+@keyframes rise{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
+.prod .pr{font-family:'Pacifico',cursive;color:var(--pink);font-size:24px;margin-top:20px;opacity:0;animation:fadeIn .8s 2.4s both}
+.prod .wrap{animation:shake .6s 2s both, zoom 6s 2.6s ease-out both}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+.spot{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,147,.18),transparent 70%);animation:sweep 3s ease-in-out infinite alternate;pointer-events:none}
+@keyframes sweep{from{transform:translate(-120px,-60px)}to{transform:translate(120px,60px)}}
+.feet{display:flex;gap:14px;justify-content:center;font-size:30px;height:44px;margin-bottom:26px}
+.feet span{opacity:0;animation:step .3s both}
+.feet span:nth-child(odd){transform:translateY(10px)}
+@keyframes step{from{opacity:0;scale:1.6}to{opacity:1;scale:1}}
+.spons .sm{font-size:13px;letter-spacing:3px;color:var(--siva);margin-bottom:18px;animation:fadeIn .6s both}
+.spons .nm3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;line-height:1.1;color:var(--koralj);animation:slam .6s 1.8s both}
+.spons .tl{margin-top:18px;font-style:italic;color:var(--siva);animation:fadeIn .6s 2.6s both}
+.quiz .pb{width:100%;height:10px;background:#3a2840;border-radius:6px;overflow:hidden;margin:26px 0 10px}
+.quiz .pb i{display:block;height:100%;width:0;background:var(--pink);animation:fill 3s cubic-bezier(.3,.8,.4,1) .4s forwards}
+@keyframes fill{to{width:99%}}
+.quiz .pc{font-size:13px;color:var(--siva)}
+.quiz .lie{margin-top:40px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;color:#FF4D4D;opacity:0;animation:glitch .9s 4.4s both}
+.quiz .zap{margin-top:18px;font-size:16px;color:var(--siva);opacity:0;animation:fadeIn .5s 3.8s both}
+@keyframes glitch{0%{opacity:0;transform:skewX(40deg)}20%{opacity:1;transform:skewX(-30deg) translateX(-10px)}40%{transform:skewX(20deg) translateX(8px);color:#5cf}60%{transform:skewX(-10deg);color:#FF4D4D}100%{opacity:1;transform:none}}
+.lg .heart{font-size:54px;color:var(--pink);animation:beat 1.1s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+.lg .l1{font-family:'Pacifico',cursive;font-size:56px;color:var(--pink);line-height:1.2;animation:slam .8s .3s both}
+.lg .l2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--koralj);animation:spread 1.4s 1s both}
+@keyframes spread{from{letter-spacing:0;opacity:0}to{letter-spacing:12px;opacity:1}}
+.lg .l3{margin-top:40px;font-size:14px;color:var(--siva);animation:fadeIn .6s 2s both}
+.credits{overflow:hidden;padding-top:0;padding-bottom:0}
+.roll{animation:roll 32s linear both;text-align:center;padding-top:100dvh}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(-100%)}}
+.roll .r{margin-bottom:22px}
+.roll .r small{display:block;font-size:12px;letter-spacing:2px;color:var(--siva);text-transform:uppercase;margin-bottom:3px}
+.roll .r span{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px}
+.again{pointer-events:auto;margin-top:34px;background:var(--pink);color:#2a0716;border:0;border-radius:24px;padding:12px 26px;font:700 15px 'Bricolage Grotesque',sans-serif;cursor:pointer;animation:fadeIn .6s 1.6s both}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<div class="top"><div class="bar"><i id="prog" style="width:0"></i></div>
+<div class="meta"><span id="lbl"></span><button id="restart" aria-label="Ispočetka">↺ ispočetka</button></div></div>
+<div class="stage" id="stage"></div>
+</div>
+<script>
+const C={
+"Nina":"#B79BFF","Antun":"#FF7EB6","Luka":"#FFB25C","Jona":"#5FB0FF","Leko":"#8FE3D0","Cole":"#8FE3D0","Perić":"#A6E07A","Matej":"#6FD3FF",
+"Salak":"#D9C27A","Marta":"#FFC2D6","Helena":"#FFAA8F","Lara":"#FFAA8F","Danijela":"#FF6B6B","Veronika":"#E59BFF","Sara":"#9AA8FF","Sabina":"#B8C4CC",
+"Producent":"#FFC93C","Sestra Danijela":"#FF6B6B","Svi":"#F4E8EE"};
+const S=[
+{t:"warn"},
+{t:"prod"},
+{t:"spons"},
+{t:"quiz"},
+{t:"logo"},
+
+{t:"title",ep:1,n:"Šešir je bio heteroseksualan"},
+{t:"narr",x:"Dobrodošli na Love Island Adria. Četrnaest Otočana. Jedna vila. Nula sigurnosnih protokola."},
+{t:"narr",x:"Pravila su jednostavna: pronađi ljubav, preživi ostale i ne spominji kviz osobnosti."},
+{t:"scene",l:[["","Prva ulazi Nina. Sunčane naočale. Devet je navečer."],["Nina","Može proći."],["","Bazen se, iz poštovanja, malo smiri."]]},
+{t:"card",w:"Nina",ty:"Legendarna kraljica · Monarhija",ab:"Kad Nina uđe u igru, svi ostali Otočani dobivaju −1 samopouzdanje. Ne može biti izabrana. Ona bira.",fl:"„Moji su standardi viši od mene.“",pt:"10/10"},
+{t:"conf",w:"Nina",q:"Svi misle da tražim savršenog muškarca. Ne. Tražim muškarca koji zna da nije savršen i svejedno se trudi. Dosad nijedan nije prošao drugi krug."},
+{t:"scene",l:[["","Antun ulazi. Stane. Okrene se. Skine naočale. Pogleda ravno u kameru."],["Antun","Dame. Ne trudite se."],["Antun","Gospodo. Trudite se."],["Nina","Uvježbao si to."],["Antun","Tri puta. U kupaonici. Drugi put je bio najbolji."]]},
+{t:"card",w:"Antun",ty:"Teatralni čarobnjak · Glumac",ab:"Može odigrati spontanost, ali samo ako ju je uvježbao tri puta. Nakon svake scene mora se povući u tišinu na jedan potez.",fl:"„Ovo nije vila. Ovo je moja pozornica.“",pt:"∞/2"},
+{t:"scene",l:[["","Luka ulazi. Ne gleda ljude u oči. Gleda dolje."],["Luka","Nina. Lijepa stopala. Sedam i pol."],["Nina","Molim?"],["Luka","Antun, osam. Ali samo zato što si se okrenuo pa sam vidio obje strane."],["Antun","…hvala?"]]},
+{t:"card",w:"Luka",ty:"Kaotični otočanin · Legendarni",ab:"Kad netko kaže nešto ozbiljno, Luka dobiva +1 aura i ignorira to. Ocjenjuje stopala svih koji uđu u igru.",fl:"„Bokte, opet riža.“",pt:"6/7"},
+{t:"scene",l:[["","Ulazi Jona. Križić oko vrata. Kosa savršena. Vidi Luku."],["Jona","Ne."],["Luka","Jona, brate. Sudbina."],["Jona","Sudbina ne postoji. Postoji Božji plan. I Božji plan sigurno nije ovo."],["Luka","Brate, mi smo… lore."]]},
+{t:"card",w:"Jona",ty:"Križarski vitez · Pobožni",ab:"Jednom po potezu smije reći „to je grijeh“. Ne može proći pored ogledala, bazena ni žlice a da ne provjeri kosu.",fl:"„Taština je grijeh. Kako mi stoji kosa?“",pt:"7/7"},
+{t:"conf",w:"Jona",q:"Došao sam naći ženu s kojom ću ići na misu. Ako je ne nađem, barem ću se lijepo preplanuti. Taština je grijeh. Preplanulost nije. Provjerio sam."},
+{t:"scene",l:[["","Perić ulazi s termosicom. Za svakoga."],["Perić","Kava? Imam i šećer. Imam i špil Magica, ako netko…"],["Leko","Ja ću kavu. Magic poslije."],["Perić","Poslije znači večeras?"],["Leko","Poslije znači poslije, brate."]]},
+{t:"card",w:"Perić",ty:"Dobri čarobnjak · Kava",ab:"Na početku svakog jutra stvara token: kava. Kad nitko ne zatraži pomoć, ponudi je svejedno. Dvaput.",fl:"„Igraš Magic? Ne? Naučit ću te.“",pt:"4/4"},
+{t:"card",w:"Leko",ty:"Mudri mentor · Dvostruka priroda",ab:"Danju je Leko. Nakon treće pive se transformira u Colea. Cole se ne može ispovjediti do nedjelje.",fl:"„Reći ću ti istinu. Mirno. I bolit će.“",pt:"3/3"},
+{t:"scene",l:[["Perić","Mateju, kava?"],["Matej","Ne."],["Perić","Čaj onda?"],["Matej","APSOLUTNO čaj."],["Matej","Usput, letio sam Boeingom 737-800. Pilot je savršeno sletio. Nitko nije pljeskao. To me i dalje muči."]]},
+{t:"card",w:"Matej",ty:"Pilot astronaut · Čajni red",ab:"Kava je zabranjena u njegovom radijusu. Može nabrojati sve Boeingove modele po redu. Ne može objasniti 6-7.",fl:"„APSOLUTNO čaj.“",pt:"747/737"},
+{t:"scene",l:[["","Ulaze Veronika i Danijela. Danijela nosi mobitel kao oružje."],["Veronika","Bok svima! Ja sam Veronika, nemam pojma što radim ovdje, ali volim vas sve."],["Danijela","Ja sam Danijela. Tko je dirao moj kofer?"],["Luka","Nitko."],["","Danijela zamahne mobitelom. Zvuk biča. Luka sjedne."]]},
+{t:"card",w:"Danijela",ty:"Sestra discipline · Kaos",ab:"Zamahom mobitela proizvodi zvuk biča. Svi Otočani muškog spola odmah sjedaju. Jednom dnevno odbije poziv od Johna Porka.",fl:"„Na koljena. Šalim se. Ili ne.“",pt:"5/5"},
+{t:"card",w:"Veronika",ty:"Kaotična vidovnjakinja · Bez plana",ab:"Čita misli. Nema pojma što bi s njima. Plan? Što je to?",fl:"„Ovo me plaši.“",pt:"?/?"},
+{t:"conf",w:"Veronika",q:"Imam supermoć. Čitam misli. Ušla sam u vilu i pročitala svih trinaest. Ovo me plaši."},
+{t:"scene",l:[["","Marta ulazi i zagrli sve. Redom. Uključujući kameru."],["Marta","Bok! Kako ste? Jeste li jeli? Treba li kome nešto?"],["","Sara ulazi iza nje. Stane u kut. Promatra."],["Luka","A ti si?"],["Sara","Sara."],["Luka","I…?"],["Sara","I ništa. Sara."]]},
+{t:"card",w:"Marta",ty:"Mirotvorka · Topla",ab:"Smiruje svaku svađu u vili. Svaku. I vodi evidenciju svake.",fl:"„Jedva čekam vidjet što će bit iz ovog.“",pt:"2/9"},
+{t:"card",w:"Sara",ty:"Tiha snajperistica · Promatračica",ab:"Ne mora govoriti: jedna podignuta obrva nanosi 3 štete. Pod stresom nanosi 10 štete svemu u blizini, uključujući rižu.",fl:"„Ne.“",pt:"1/10"},
+{t:"scene",l:[["Sabina","A brate, šta je ovo? Gdje je hlad?"],["Perić","Kava?"],["Sabina","Ne pijem kavu."],["Perić","Čaj?"],["Sabina","Ni čaj."],["Perić","Što piješ?"],["Sabina","Ništa. Ništa nije dovoljno dobro."]]},
+{t:"card",w:"Sabina",ty:"Zlikovka · Prigovor",ab:"Ništa nije dovoljno dobro. Svaki njezin prigovor je zapravo fora, ali to zna samo ona.",fl:"„A brate, šta misliš di idemo.“",pt:"nijedno"},
+{t:"scene",l:[["","Ulazi zadnja cura. Ne pozdravlja. Ravno u kuhinju."],["Antun","Kako se zoveš?"],["","Puna usta. Dugo žvakanje."],["Lara","Lara."],["","U kontrolnoj sobi producent provjeri popis. Na popisu nema nikakve Lare."]]},
+{t:"card",w:"Lara",ty:"Gladna duša · Pod pseudonimom (?)",ab:"Fanum tax: uzima jedan zalogaj od svake hrane u vili. Može ući u igru pod drugim imenom.",fl:"„Kako se zove smiješni kakao? Ha-ha-o.“",pt:"🍝/🍝"},
+{t:"conf",w:"Lara",q:"Moje ime? Nije bitno. Bitno je gdje je hladnjak. … Znate li kako se zove smiješni kakao? Ha-ha-o."},
+{t:"scene",l:[["","Salak ulazi zadnji. Sa skicirkom. Gleda izlaz."],["Salak","Bok. Ja sam Salak. Ne tražim ljubav, samo da znate. Nemojte se truditi."],["Veronika","Ovo me plaši."],["Salak","Mene isto."]]},
+{t:"card",w:"Salak",ty:"Umjetnik koji ne želi biti ovdje · Agnostik",ab:"Ne može biti izabran za ljubav. Može nacrtati bilo koga. Na partyju zaspi i postane umjetnička instalacija.",fl:"„Ne znam zašto sam ovdje. Ali dobro.“",pt:"2/8"},
+{t:"scene",l:[["Luka","Ljudi. Imam prijedlog. Ova vila je komuna."],["Nina","Ne."],["Luka","Komunalni ručnici. Komunalna kava. Komunalna stopala."],["Danijela","Luka, ako još jednom kažeš stopala—"],["","Zvuk biča."],["Luka","Komunalni bič. Prihvaćeno."]]},
+{t:"conf",w:"Nina",q:"Ja nisam komuna. Ja sam monarhija. Ustavna, jer sam fer."},
+{t:"msg",b:"Imam poruku!",x:"Otočani, vrijeme je za prvo spajanje. Ove sezone parove bira šešir. #sudbina #komuna"},
+{t:"big",x:"ŠEŠIR.",s:"Producenti su potrošili cijeli budžet na ovaj šešir. Šešir je iz 1987."},
+{t:"scene",l:[["","Marta izvlači prvi listić."],["Marta","Jona… i… Luka."],["Jona","NE."],["Luka","BOKTE OPET RIŽA."],["Jona","Ovo nema smisla!"],["Luka","Brate, ništa nema smisla. To je poanta."]]},
+{t:"list",h:"Ostali parovi iz šešira",l:["Antun i Nina","Sabina i Perić","Lara i Salak","Marta i Matej","Veronika i Danijela","Sara i Leko"]},
+{t:"narr",x:"Napomena produkcije: šešir je bio heteroseksualan. Šešir nikoga ništa nije pitao. Šešir je iz 1987. i nije se htio promijeniti."},
+{t:"scene",l:[["Antun","Nina. Ti i ja. Dvije glavne uloge u jednom paru."],["Nina","Ne. Jedna glavna uloga i jedan jako dobar sporedni lik."],["Antun","…sviđaš mi se. Mrzim to."]]},
+{t:"scene",l:[["Sabina","Periću. Ne pijem kavu. Ne pijem čaj. Ne zanimaju me dečki."],["Perić","Može topla voda s limunom?"],["Sabina","…može."],["","Prema producentima, ovo je prvi put da je Sabina pristala na nešto."]]},
+{t:"scene",l:[["Salak","Lara. Ne želim ljubav."],["Lara","Ni ja. Želim tvoj doručak."],["Salak","…dogovor."],["","Prvi brak iz interesa u povijesti formata."]]},
+{t:"scene",l:[["Matej","Marta, piješ li kavu?"],["Marta","Da, zašto?"],["","Matej se odmakne pola metra."],["Marta","U redu je, Mateju. Neću te natjerati."],["Matej","To je najljepša stvar koju mi je netko danas rekao."]]},
+{t:"scene",l:[["Veronika","Danijela! Kakva ti je energija? Mislim da smo mi—"],["Danijela","Sjedni."],["Veronika","Sjela sam."],["","Veronika je sretna. Ljubav na prvi zvuk biča."]]},
+{t:"scene",l:[["Leko","Sara, iskreno: mislim da nismo jedno za drugo."],["Sara","Znam."],["Leko","Ali mislim da ćemo biti dobri prijatelji."],["Sara","Znam."],["Leko","Ti sve znaš?"],["Sara","Ne. Ali ovo da."]]},
+{t:"narr",x:"Prva noć. Jona i Luka dijele krevet. Bog gleda. Komuna gleda. Svi gledaju."},
+{t:"scene",l:[["","Jona stavi krunicu na sredinu kreveta."],["Jona","Ovo je granica."],["Luka","Brate, to je krunica."],["Jona","To je granica i krunica. Dva u jedan."],["Luka","A ako ti noga pređe na moju stranu?"],["Jona","Neće."],["Luka","Jer ću je ocijeniti."]]},
+{t:"conf",w:"Luka",q:"Nisam ga htio živcirati. Lažem. Htio sam. Ali poslije sam mu donio vodu. Ne znam zašto. Ne pitajte."},
+{t:"scene",l:[["","Ponoć. Antun sjedi u praznoj kadi. U potpunoj tišini."],["Nina","(kroz vrata) Što radiš?"],["Antun","Punim baterije. Cijeli dan sam bio lik. Sad sam samo ja. I kada."],["Nina","Mogu ući?"],["Antun","Ako ne pričaš."],["","Nina uđe. Ne priča. Najljepših dvadeset minuta njihovog odnosa."]]},
+{t:"scene",l:[["","Matej leži budan. Gleda u strop."],["Matej","(šapće) Rekao sam Antunu „laku noć“."],["Matej","A trebao sam reći „laku noć, Antune“."],["Matej","Ovako zvuči hladno. Ili ne. Ili da."],["","Ovo traje do četiri ujutro."]]},
+{t:"conf",w:"Antun",q:"Luka? Luka je… zanimljiv. Kaotičan. Ocijenio mi je stopala osmicom. Nitko mi nikad nije dao osmicu ni za što."},
+{t:"scene",l:[["","Jutro. Marta radi palačinke za cijelu komunu."],["Marta","Lara, hoćeš palačinke?"],["Lara","Helena."],["Marta","Molim?"],["Helena","Zovem se Helena. Lara je bila… ne znam što je bila Lara."],["","Tišina."]]},
+{t:"big",x:"TKO JE ONDA LARA?",s:"Kraj prve epizode."},
+
+{t:"spons",ad:1},
+{t:"title",ep:2,n:"Bokte, opet riža"},
+{t:"narr",x:"Drugi dan. Vila se probudila kao prava komuna: netko je pojeo sve pahuljice i nitko ne priznaje."},
+{t:"scene",l:[["Sabina","A brate, tko je pojeo pahuljice?"],["","Svi gledaju Helenu."],["Helena","Ne gledajte mene. Gledajte Laru."],["Sabina","LARA NE POSTOJI."],["Helena","Onda je to savršen zločin."]]},
+{t:"msg",b:"Imam poruku!",x:"Otočani! Danas igrate Večeru za 14. Svaki par kuha, svi ocjenjuju. Pobjednici dobivaju večer u Hideawayu. #kuhanje #drama"},
+{t:"conf",w:"Perić",q:"Volim kuhati. Kuham za sve. A u ovoj vili Helena pojede sve. Sve. Ovo je raj."},
+{t:"scene",l:[["Jona","Luka, makni se iz kuhinje."],["Luka","Ne mogu, brate, mi smo par. Komunalna kuhinja."],["Jona","Dobro. Što kuhamo?"],["Luka","Rižu."],["Jona","Opet?"],["Luka","Bokte, opet riža."]]},
+{t:"scene",l:[["","Sara i Leko rade desert. Luka prođe treći put s loncem riže."],["Luka","Sara, kušaj rižu, fali li soli?"],["Sara","Luka."],["Luka","Da?"],["Sara","Ako još jednom uđeš u ovu kuhinju s tom rižom, ti ćeš biti ta riža. Kuhan. Ocijeđen. Posoljen."],["","Luka izlazi. Natraške."]]},
+{t:"conf",w:"Leko",q:"Sara je najmirnija osoba koju znam. Zato me strah kad nije. Kao kad se more povuče prije tsunamija."},
+{t:"scene",l:[["Antun","Ja ću prezentaciju, ti kuhaj."],["Nina","Ja ću sve. Ti stoj lijepo."],["Antun","Dogovor."],["","Najfunkcionalniji par u vili. Nitko ne zna kako."]]},
+{t:"scene",l:[["Matej","Pećnica mora biti na točno 180 stupnjeva. Ne 175. Ne 185."],["Marta","Može 180."],["Matej","Marta, ti uvijek kažeš „može“."],["Marta","Pa… može."],["Matej","Zanimljivo."],["","Matej to zapisuje. Matej sve zapisuje."]]},
+{t:"scene",l:[["","Večera. Ocjenjivanje. Sabina ima prvu riječ."],["Sabina","Jona i Luka, riža. Dva."],["Sabina","Antun i Nina, nešto francusko. Dva."],["Sabina","Perić… (žvače jako dugo) …dva."],["Perić","Svi su dobili dva!"],["Sabina","Da. Ali tvoja dvica je bila iskrena."]]},
+{t:"scene",l:[["Helena","Periću. Ovo je najbolja stvar koju sam ikad jela."],["Perić","Stvarno?"],["Helena","Stvarno. Imaš li još?"],["Perić","Imam."],["Helena","A poslije toga?"],["Perić","Uvijek imam."],["","Perić svijetli. Doslovno: netko je upalio reflektor iza njega. Bio je to Salak."]]},
+{t:"msg",b:"Imam poruku!",x:"Pobjednici Večere za 14 su Perić i Sabina. Sabina je svima dala dvicu, Perić svima deseticu. Prosjek je spasio komunu."},
+{t:"scene",l:[["","Hideaway. Svijeće. Latice ruža. Perić i Sabina."],["Sabina","Ovdje nema hlada."],["Perić","Unutra smo."],["Sabina","Svejedno."],["","Pričali su do tri ujutro. O Magicu. Sabina tvrdi da joj je bilo dosadno. Sabina laže."]]},
+{t:"conf",w:"Perić",q:"Pitala je postoji li karta koja briše sve ostale karte. Rekao sam da postoji. Rekla je: „To. Ja sam to.“"},
+{t:"scene",l:[["","Večer. Kuhinjski stol je postao bojno polje. Perić, Luka, Matej, Leko i Jona. Magic."],["Jona","Igram anđela."],["Luka","Counterspell."],["Jona","Ne možeš counterati anđela!"],["Matej","Tehnički može. Pravila su jasna."],["Jona","Mateju, na čijoj si ti strani?"],["Matej","Na strani pravila."]]},
+{t:"scene",l:[["Jona","Luka, ti si demon."],["Luka","Brate, ja sam ateist. Nemam ni demona. Imam samo vibe."],["Jona","IZAĐI."],["Luka","Iz igre ili iz vile?"],["Jona","IZ MOG ŽIVOTA."],["","Pet minuta kasnije zajedno jedu grickalice i gledaju meme na Joninom mobitelu."]]},
+{t:"narr",x:"Party. Nina ne pije, pa je jedina trijezna osoba u krugu od četrdeset kilometara. Ona sve vidi. Ona sve pamti."},
+{t:"scene",l:[["","Danijela, tri koktela kasnije, s ručnikom na glavi kao velom."],["Sestra Danijela","Ja sam sestra Danijela. Ovo je samostan. Svi na koljena."],["","Zvuk biča."],["Luka","Sestro, ja sam ateist."],["Sestra Danijela","Onda ti dvaput."],["","Zvuk biča. Dvaput."]]},
+{t:"scene",l:[["Sestra Danijela","Jona. Periću. Dođite. Objasnite mi Boga. Ali brzo, prije nego zaboravim."],["Jona","Pa… u početku bijaše Riječ."],["Sestra Danijela","Koja riječ?"],["Luka","(iz daljine) Riža."],["Jona","LUKA, JEBOTE."],["Perić","Jona, psovka."],["Jona","…oprosti, Bože. Oprosti, Luka. Ne, Luka, ne opraštam ti."]]},
+{t:"scene",l:[["","U kutu: Leko u stolici. Danijela mu radi eyeliner između dvije molitve."],["Leko","Danijela, ako Bog vidi sve, vidi i ovaj eyeliner."],["Danijela","I sviđa mu se."],["Leko","…vjerojatno."],["","Cole se probudio."]]},
+{t:"scene",l:[["","Marta je na stolu. Pleše. Urla."],["Marta","RIM TIM TAGI DIM!"],["Matej","Ovo nije Marta."],["Sara","Ovo je Marta. Samo bez kočnica."],["Marta","JA SAM ZABAVNA! ZAŠTO MI TO NITKO NIJE REKAO?"]]},
+{t:"scene",l:[["","Tarot kutak. Antun i Veronika. Svijeće. Jona ih iz daljine gleda kao inkvizitor."],["Veronika","Izvući ću ti kartu za ljubav."],["","Ljubavnici."],["Antun","Ljubavnici! Luka!"],["Veronika","Čekaj. Ima još jedna."],["","Druga karta: Pustinjak. Tihi lik s lampom koji gleda u zvijezde."],["Antun","…tko gleda u zvijezde?"]]},
+{t:"big",x:"Matej gleda u zvijezde.",s:"S druge strane vrta. Naravno."},
+{t:"scene",l:[["Matej","Antune. Ono svjetlo što se kreće je ISS. Leti dvadeset osam tisuća kilometara na sat."],["Antun","Zašto mi to govoriš?"],["Matej","Jer je lijepo. I jer si ti tu."],["","Matej ga zagrli. Ne pita. Samo zagrli. Antun se ukoči. Pa se opusti."],["Antun","…može još jednom?"]]},
+{t:"conf",w:"Antun",q:"Luka mi je bio fascinantan. Do jučer. Ja se brzo oduševim. I brzo… preusmjerim. To je talent. Glumački."},
+{t:"scene",l:[["","Luka s druge strane bazena vidi zagrljaj."],["Luka","Wow. Slay. Mother. Ate."],["","Ali ovaj put to kaže tiho. Nitko ga ne čuje. I ne nasmije se."]]},
+{t:"scene",l:[["","Kasno. Veronika plače od smijeha, pa samo plače. Sabina sjedi do nje."],["Sabina","Zašto plačeš?"],["Veronika","Ne znam. Sve me dira. Ti me diraš."],["Sabina","Ja te ne diram."],["Veronika","Emocionalno."],["Sabina","…a brate."],["","Sabina se nasmiješi. Kamera to uhvati. Jedina takva snimka u povijesti."]]},
+{t:"scene",l:[["","Salak je zaspao na ležaljci u pozi grčkog kipa. Netko je stavio natpis: „Instalacija. Ne dirati.“"],["Sabina","Najbolje umjetničko djelo u vili. I dalje dva."]]},
+{t:"conf",w:"Nina",q:"Bila sam trijezna. Sve sam vidjela. I ne, neću vam reći. Ni za Martu na stolu. Ni za Leka. Ni za Luku koji je pola sata gledao u bazen. Ups."},
+{t:"msg",b:"Imam poruku!",x:"Otočani, večeras je recoupling. Šešir je u mirovini. Birate sami. #nemašešira"},
+{t:"narr",x:"Ceremonija. Svjetla. Dramatična glazba koju je skladao Salak. Zove se „Ne želim biti ovdje, op. 2“."},
+{t:"scene",l:[["Perić","Biram nekoga tko je pojeo sve što sam ikad skuhao. I svaki put rekao hvala. Punih usta."],["Perić","Helena."],["Helena","(žvače) …da."]]},
+{t:"scene",l:[["Leko","Iskren ću biti. Biram osobu koja je sinoć plesala na stolu. Prvi put sam je vidio da radi nešto samo za sebe."],["Leko","Marta."],["Marta","(crveni se) Ne sjećam se nikakvog stola."],["Nina","(iz publike) Ja se sjećam."]]},
+{t:"scene",l:[["Nina","Imam kriterije. Četrdeset sedam ih je. Jona je prošao četrdeset šest."],["Jona","Koji nisam?"],["Nina","Gledaš se u bazen kad misliš da nitko ne gleda."],["Jona","…to je bilo da provjerim vodu."],["Nina","Jona."],["Jona","Dobro. Bilo je za kosu."],["Nina","Jona."]]},
+{t:"big",x:"SABINA USTAJE.",s:"Svi znaju da Sabina nikad ne ustaje."},
+{t:"scene",l:[["Sabina","Ne sviđa mi se ništa ovdje. Hrana, sunce, bazen, Luka."],["Sabina","Osim jedne stvari."],["Sabina","Veronika."],["Danijela","MOLIM?!"],["","Zvuk biča. Ovaj put ozbiljan."],["Veronika","(šapće) Ovo me plaši. Ali na dobar način."]]},
+{t:"conf",w:"Sabina",q:"U filmu bih bila zlikovac. Hvala. Trudim se."},
+{t:"big",x:"ANTUN USTAJE.",s:"Polako. Dramatično. Trebalo mu je četrdeset sekundi."},
+{t:"scene",l:[["Antun","Prvu noć mislio sam da znam svoj tip. Kaos. Stopala. Riža."],["Antun","A onda mi je netko pokazao svemirsku postaju."],["Antun","Mateju."],["Matej","(dugo) …Ja?"],["Antun","Ti."],["Matej","Moram ovo analizirati."]]},
+{t:"scene",l:[["","Luka plješće. Prvi. Najglasnije."],["Luka","Bravo. Sigma. Slay."],["","Nitko ne primijeti da pritom ne gleda nikoga."]]},
+{t:"scene",l:[["Sara","Danijela."],["Danijela","Ja?"],["Sara","Glasna si, ali nisi glupa. To je rijetko."],["Danijela","To je najljepša stvar koju mi je itko rekao."],["Sara","Znam."]]},
+{t:"msg",b:"Imam poruku!",x:"Luka i Salak ostali su bez para. Sutra Otočani glasaju tko napušta vilu."},
+{t:"scene",l:[["Salak","Izglasajte mene. Ne želim ljubav. Ne želim biti ovdje. Bit ćete sretniji."],["Luka","Brate, ti si najbolji lik ovdje."],["Salak","Ne, ti si."],["Luka","Ne, ti."],["","Ovo traje dvanaest minuta. Nitko ne pobjeđuje."]]},
+{t:"big",x:"Netko ide doma.",s:"Ili ne. Kraj druge epizode."},
+
+{t:"spons",ad:2},
+{t:"title",ep:3,n:"Tko bi vratio vrijeme"},
+{t:"narr",x:"Treći dan. Glasanje. Vila je tiha. Čak je i Luka tih. To nikoga ne smiruje."},
+{t:"msg",b:"Imam poruku!",x:"Otočani su odlučili. Vilu napušta: Salak."},
+{t:"scene",l:[["Salak","Dobro. Idem se spakirati."],["","Salak ode po kofer. Vrati se bez kofera."],["Salak","Ne idem."],["Nina","Molim?"],["Salak","Ne idem. Ovo su moji ljudi. Helena, krunica, Lukina stopala. Ne idem."],["Veronika","Ovo me plaši."]]},
+{t:"scene",l:[["Luka","Komuna glasa! Tko je za to da Salak ostane?"],["","Trinaest ruku."],["Sabina","Dobro. Ali ja sam digla ruku ironično."],["Luka","Komuna prihvaća ironične ruke."]]},
+{t:"msg",b:"Imam poruku!",x:"Producenti više nemaju snage. Salak ostaje kao komunalni umjetnik. Ne može biti u paru. Ne želi biti u paru. Svi sretni."},
+{t:"scene",l:[["Luka","Salak. Ti i ja. Platonski par."],["Salak","Najbolji par. Bez ljubavi."],["Luka","Samo vibe."],["Salak","I skice tvojih stopala?"],["Luka","…brate. To bi bilo predivno."]]},
+{t:"msg",b:"Imam poruku!",x:"Otočani, dignite ruke: tko bi vratio vrijeme da može?"},
+{t:"big",x:"OSAM RUKU.",s:"Od četrnaest. Nitko ne objašnjava. Nitko ne pita."},
+{t:"scene",l:[["Jona","Ja bih vratio na prvi dan. Da stavim veću krunicu."],["Perić","Ja na sinoć. Da skuham još jednu porciju."],["Nina","Ja bih vratila vrijeme samo da ga bolje isplaniram."],["Matej","Ja bih vratio dvije minute. Napisao sam Antunu „ok.“ S točkom. Točka je bila greška."],["Antun","Mateju, sjedim pored tebe."],["Matej","Znam. Zato je greška veća."]]},
+{t:"narr",x:"Noć. Luka nikad nije sam. Večeras sjedi sam na rubu bazena."},
+{t:"scene",l:[["","Antun sjedne do njega."],["Antun","Što je?"],["Luka","Ništa, brate. Sve 6-7."],["Antun","Luka."],["","Tišina."],["Luka","Oprosti."],["Antun","Za što?"],["Luka","Ne znam. Uvijek prvi kažem oprosti. Lakše je."]]},
+{t:"scene",l:[["Antun","Ne moraš mi se ispričavati."],["Luka","Znam. Htio sam ti nešto reći, a nisam znao kako bez riže."],["Luka","Bio si mi najdraža osoba u vili. Nisam to rekao jer sam ja vic. A vicevi ne kažu takve stvari."],["Luka","I sad sam rekao. I sad skačem u bazen. Odmah."],["","Skoči. U odjeći. Opet."]]},
+{t:"conf",w:"Antun",q:"Ja planiram sve. Svaki ulaz, svaku repliku. Ovo nisam isplanirao. Mrzim kad nešto nisam isplanirao. Ovo je bilo lijepo."},
+{t:"scene",l:[["Luka","(mokar) Marta, posudiš mi ručnik? Komunalni?"],["Marta","Ne."],["","Tišina. Ptice prestanu pjevati."],["Luka","…Marta je rekla ne."],["Sara","Marta je rekla NE."],["Leko","(ponosno) To je moja cura."]]},
+{t:"big",x:"MARTA JE REKLA NE.",s:"Prvi put u tri dana. Možda i u povijesti."},
+{t:"conf",w:"Marta",q:"Ne znam što mi je bilo. Bilo je super. Reći ću ne opet. Možda sutra. Ne. Danas. NE!"},
+{t:"scene",l:[["Jona","Luka, ti si najnaporniji čovjek kojeg poznajem."],["Luka","A ti najljepši. Taština, brate."],["Jona","…stvarno?"],["Luka","Ne."],["Jona","LUKA."],["Luka","Da. Stvarno. Kosa ti je top."],["","Jona ga zagrli. Brzo, kao da se ništa nije dogodilo. Nitko ne komentira. Svi su vidjeli."]]},
+{t:"msg",b:"Imam poruku!",x:"Javnost je izglasala pobjednike. Rezultati na finalu. Napomena: najviše glasova ima osoba po imenu Lara."},
+{t:"scene",l:[["Nina","Tko je Lara?"],["Sabina","Lara ne postoji."],["Veronika","Lara je duh. Osjetila sam je prvi dan."],["Jona","Treba blagosloviti vilu."],["Danijela","Treba bičevati vilu."],["","Helena polako žvače. Ne govori ništa."]]},
+{t:"narr",x:"Finale. Šest parova, jedan komunalni umjetnik i jedan duh."},
+{t:"scene",l:[["Perić","Helena, s tobom mi nikad ne ostane ništa u loncu. To je najljepši osjećaj na svijetu."],["Helena","Periću, znaš kako se zove smiješni kakao?"],["Perić","Znam. Ha-ha-o. Rekla si mi 31 put."],["Helena","I svaki put si se nasmijao."],["Perić","Svaki put."]]},
+{t:"scene",l:[["Leko","Marta, ti si mirna, ja sam miran. Producent nas je dvaput provjerio jesmo li živi."],["Marta","Leko… ne."],["Leko","Ne?"],["Marta","Nisi u pravu. Nismo mirni. Samo smo tihi. Ja sam iznutra tri dana urlala Baby Lasagnu."],["Leko","…to je najiskrenija stvar koju sam čuo. A ja sam ja."]]},
+{t:"scene",l:[["Jona","Nina, ti si četrdeset sedam od četrdeset sedam."],["Nina","Znam."],["Jona","Ja sam četrdeset šest."],["Nina","Znam. Ali radiš na sebi."],["Jona","Radim na kosi."],["Nina","To se računa."]]},
+{t:"scene",l:[["Sabina","Veronika. Sve mi ide na živce. Ti ne. Užasno je. Hvala."],["Veronika","Prvi dan sam ti pročitala misli."],["Sabina","I?"],["Veronika","Bile su dosadne. Osim jedne."],["Sabina","…a brate."]]},
+{t:"scene",l:[["Danijela","Sara. Svima ovdje prijetila sam bičem. Tebi nisam. Shvati to ozbiljno."],["Sara","Shvaćam."],["Danijela","To je sve što ćeš reći?"],["Sara","Da."],["","Sara se nasmiješi. Danijela od šoka padne u bazen."]]},
+{t:"scene",l:[["Matej","Antune. Analizirao sam sve naše razgovore. Bilo ih je četrdeset sedam. Najbolji je bio onaj u kojem nismo pričali."],["Antun","Koji?"],["Matej","Kad smo gledali ISS."],["Antun","Mateju… to je bila moja replika. To sam ja htio reći."],["Matej","Znam. Pročitao sam ti bilješke. Ostavio si ih na stolu."]]},
+{t:"scene",l:[["Antun","Pripremio sam govor. Tri stranice. Dramatske pauze označene crvenom."],["","Antun baci papire u bazen."],["Antun","Volim te, Mateju. Bez probe."],["Matej","To je… neisplanirano."],["Antun","Znam. Užasavam se."],["Luka","(iz pozadine, tiho, iskreno) Bravo, brate."]]},
+{t:"scene",l:[["Luka","Salak, ti si moj platonski muž."],["Salak","Najljepši brak bez ljubavi u povijesti."],["Luka","Komunalni brak."],["Salak","Nacrtao sam nas."],["","Crtež: dvije osobe i četiri stopala. Stopala su nacrtana jako detaljno."]]},
+{t:"big",x:"REZULTATI.",s:"Javnost je glasala. Producenti su opet izgubili papir s ostalim mjestima. Idemo ravno na pobjednike."},
+{t:"big",x:"Pobjednica Love Island Adria je…",s:"(dramatska pauza od tri stranice, označena crvenom)"},
+{t:"big",x:"…LARA.",s:"Molimo Laru da dođe na pozornicu.",sh:1},
+{t:"scene",l:[["","Tišina. Svi se gledaju. Veronika se prekriži, pa se sjeti da to ne radi."],["","Helena polako ustane. S tanjurom."],["Helena","Ja sam Lara."],["Sabina","NE."],["Helena","Ispunila sam anketu kao Lara. Mislila sam da je za školu."],["Nina","Koju anketu?"],["Helena","…kakao? Ha-ha-o?"]]},
+{t:"scene",l:[["Perić","Znači… mi smo pobijedili?"],["Helena","Mi smo pobijedili."],["Producent","Nagrada je pedeset tisuća eura."],["Helena","Može u hrani?"],["Producent","Ne može u hrani."],["Helena","Onda dijelimo. Pola Periću, pola komuni, pola meni."],["Matej","To su tri polovice."],["Helena","Gladna sam, Mateju. Ne računam."]]},
+{t:"list",h:"Gdje su sada?",l:["Antun i Matej: Antun piše monodramu, Matej provjerava je li fizika u njoj točna. Nije.","Luka i Salak: platonski brak i zajednička izložba „Stopala komune“.","Nina i Jona: Jona je prošao 47. kriterij. Nina je dodala 48.","Marta i Leko: Marta kaže „ne“ barem jednom dnevno. Leko vodi evidenciju. Ponosno.","Sabina i Veronika: Sabina je životu dala dvicu. Veronika deseticu. Prosjek: sretne.","Sara i Danijela: aplikacija za bič još je instalirana. Sara je nikad nije zabranila.","Helena i Perić: Perić kuha, Helena jede. Lara se više nikad nije pojavila."]},
+{t:"credits"},
+{t:"spons",out:1},
+{t:"end"}
+];
+
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const col=w=>C[w]||"#F4E8EE";
+const pill=w=>`<span class="nm" style="background:${col(w)}22;color:${col(w)}">${esc(w)}</span>`;
+const word=(t,cls)=>[...t].map((ch,i)=>`<span style="animation-delay:${(i*0.07).toFixed(2)}s">${ch===" "?"&nbsp;":esc(ch)}</span>`).join("");
+
+function render(s){
+ switch(s.t){
+ case "warn":return `<div class="scr center warn"><div class="w1">UPOZORENJE</div>
+ <p style="animation-delay:.9s">Sljedeći sadržaj sniman je bez znanja sudionika.</p>
+ <p style="animation-delay:2.4s">Šalimo se.</p>
+ <p style="animation-delay:3.6s">Djelomično.</p></div><div class="hint">tapni desno za dalje →</div>`;
+ case "prod":return `<div class="scr center prod"><div class="spot"></div><div class="wrap">
+ <div class="row">${word("KOMUNALNA")}</div><div class="row up">${word("PRODUKCIJA").replace(/animation-delay:([\d.]+)s/g,(m,d)=>"animation-delay:"+(+d+0.8).toFixed(2)+"s")}</div>
+ <div class="pr">predstavlja</div></div></div>`;
+ case "spons":{
+  const feet=[0,1,2,3,4].map(i=>`<span style="animation-delay:${(0.3+i*0.28).toFixed(2)}s">👣</span>`).join("");
+  const top=s.ad?"REKLAMA":(s.out?"VIDIMO SE · UZ POTPORU SPONZORA":"UZ POTPORU SPONZORA");
+  const tl=s.ad===1?"Dijelimo sve. Doslovno sve.":s.ad===2?"Sada i s komunalnim bičem. Upitajte Danijelu.":s.out?"Nijedno stopalo nije ozlijeđeno tijekom snimanja. Neka su ocijenjena.":"Jer u komuni je sve zajedničko. Sve.";
+  return `<div class="scr center spons"><div class="sm">${top}</div><div class="feet">${feet}</div>
+  <div class="nm3">MARTINA<br>(KOMUNALNA)<br>STOPALA</div><div class="tl">${tl}</div></div>`;}
+ case "quiz":return `<div class="scr center quiz"><p class="h" style="font-size:22px;line-height:1.3">Vaši rezultati kviza osobnosti su spremni.</p>
+ <div class="pb"><i></i></div><div class="pc">Analiziramo vaše odgovore…</div>
+ <div class="zap">Zapravo…</div><div class="lie">LAGALI SMO.</div></div>`;
+ case "logo":return `<div class="scr center lg"><div class="heart">♥</div><div class="l1">Love Island</div><div class="l2">ADRIA</div>
+ <div class="l3">Sezona 1 · tri epizode · nula filtera</div></div><div class="hint">tapni za početak</div>`;
+ case "title":return `<div class="scr center ttl"><div class="logo" style="font-size:30px;animation:fadeIn .5s both">Love Island</div>
+ <div class="h" style="letter-spacing:6px;color:var(--koralj);font-size:13px;margin:2px 0 40px">ADRIA</div>
+ <span class="ep">Epizoda ${s.ep}</span><div class="nm2">${esc(s.n)}</div></div>`;
+ case "narr":return `<div class="scr center"><p class="narr" style="font-size:19px;line-height:1.55">${esc(s.x)}</p></div>`;
+ case "scene":return `<div class="scr">${s.l.map((l,i)=>l[0]?`<div class="ln" style="animation-delay:${i*0.18}s">${pill(l[0])}<p>${esc(l[1])}</p></div>`:`<div class="ln" style="animation-delay:${i*0.18}s"><p class="dir">${esc(l[1])}</p></div>`).join("")}</div>`;
+ case "conf":return `<div class="scr conf"><p class="lab">🎙 ISPOVJEDAONICA</p><p class="q">„${esc(s.q)}“</p>
+ <div class="tag"><span class="h" style="font-size:17px;color:${col(s.w)}">${esc(s.w)}${s.w==="Lara"?" (?)":""}</span></div></div>`;
+ case "msg":return `<div class="scr center"><div class="msg"><div class="hd">💬 Love Island Adria · sada</div>
+ <div class="bd" style="text-align:left"><b>${esc(s.b)}</b><p>${esc(s.x)}</p></div></div></div>`;
+ case "card":return `<div class="scr center"><div class="card" style="text-align:left;border-color:${col(s.w)}">
+ <div style="display:flex;justify-content:space-between;align-items:center"><span class="h" style="font-size:19px">${esc(s.w)}</span><span style="color:${col(s.w)}">♥</span></div>
+ <div class="art" style="background:${col(s.w)}22;color:${col(s.w)}">${esc(s.w[0])}</div>
+ <div class="ty" style="color:${col(s.w)}">${esc(s.ty)}</div><div class="ab">${esc(s.ab)}</div><div class="fl">${esc(s.fl)}</div><div class="pt">${esc(s.pt)}</div></div></div>`;
+ case "big":return `<div class="scr center big"><div class="${s.sh?"shake":""}"><div class="t">${esc(s.x)}</div></div><div class="s">${esc(s.s||"")}</div></div>`;
+ case "list":return `<div class="scr ep-list"><p class="h" style="font-size:24px;color:var(--pink);margin-bottom:22px">${esc(s.h)}</p>${s.l.map((x,i)=>`<p class="d${Math.min(i+1,7)}">${esc(x)}</p>`).join("")}</div>`;
+ case "credits":{
+  const R=[["Režija","Komuna"],["Scenarij","nitko ne priznaje"],["Kasting","šešir iz 1987."],["Catering","Perić"],["Potrošnja cateringa","Helena"],["Vjerski savjetnik","Jona"],["Drugi vjerski savjetnik","Perić"],["Treći vjerski savjetnik","Leko (nakon treće pive: Cole)"],["Disciplina i zvučni efekti","sestra Danijela"],["Čaj konzultant","Matej (APSOLUTNO)"],["Kontrola kvalitete","Nina (47 kriterija)"],["Ocjenjivački sud","Sabina (2/10)"],["Tarot i duhovi","Veronika"],["Glazba","Salak, „Ne želim biti ovdje, op. 2“"],["Smirivanje situacija","Marta (osim na stolu)"],["Obrve","Sara"],["Stopala","Luka"],["Dramaturg, glumac i kada","Antun"],["Posebna zahvala","Lara"]];
+  return `<div class="scr credits"><div class="roll"><p class="logo" style="font-size:40px;margin-bottom:40px">Love Island</p>${R.map(r=>`<div class="r"><small>${esc(r[0])}</small><span>${esc(r[1])}</span></div>`).join("")}<p class="narr" style="margin-top:40px">Svi likovi su stvarni. Sve situacije su izmišljene. Uglavnom.</p></div></div>`;}
+ case "end":return `<div class="scr center lg"><div class="heart">♥</div><div class="big"><div class="t">KRAJ.</div></div>
+ <p class="narr" style="margin-top:22px">Druga sezona? Ovisi o komuni.</p><button class="again" id="again">Gledaj ispočetka</button></div>`;
+ }
+}
+
+const stage=document.getElementById("stage"),prog=document.getElementById("prog"),lbl=document.getElementById("lbl");
+const EP=[];let cur=0;S.forEach(s=>{if(s.t==="title")cur=s.ep;if(s.t==="credits")cur=4;EP.push(cur)});
+let k=0;
+try{const v=parseInt(localStorage.getItem("lia-pos"));if(v>0&&v<S.length)k=v}catch(e){}
+function show(i){
+ k=Math.max(0,Math.min(S.length-1,i));
+ stage.innerHTML=render(S[k]);
+ prog.style.width=(k/(S.length-1)*100).toFixed(1)+"%";
+ const e=EP[k];lbl.textContent=e===0?"Komunalna produkcija":e===4?"Odjavna špica":"Epizoda "+e;
+ try{localStorage.setItem("lia-pos",k)}catch(e){}
+ const a=document.getElementById("again");if(a)a.onclick=ev=>{ev.stopPropagation();show(0)};
+}
+stage.addEventListener("click",ev=>{const r=stage.getBoundingClientRect();show(ev.clientX-r.left<r.width/3?k-1:k+1)});
+document.addEventListener("keydown",ev=>{if(["ArrowRight"," ","Enter"].includes(ev.key)){ev.preventDefault();show(k+1)}if(ev.key==="ArrowLeft")show(k-1)});
+let tx=null;stage.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+stage.addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50){e.preventDefault();show(dx<0?k+1:k-1)}});
+document.getElementById("restart").onclick=ev=>{ev.stopPropagation();show(0)};
+show(k);
+</script>
+</body>
+</html>
