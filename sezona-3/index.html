@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120A16">
+<title>Rezultati kviza osobnosti 3</title>
+<meta name="description" content="Tvoji rezultati su spremni.">
+<meta property="og:title" content="Rezultati kviza osobnosti 3">
+<meta property="og:description" content="Treći dio je stigao. Tapni za otvaranje.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--noc:#1B1020;--ponoc:#120A16;--sljiva:#2A1B31;--pink:#FF5C93;--koralj:#FF8A6B;--sunce:#FFC93C;--krem:#F4E8EE;--siva:#A8909F}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#0b060d;color:var(--krem);font-family:'DM Sans',system-ui,sans-serif;overflow:hidden}
+.app{position:relative;width:100%;max-width:440px;height:100dvh;margin:0 auto;background:var(--noc);overflow:hidden;user-select:none;-webkit-user-select:none}
+@media (min-width:600px){.app{height:min(900px,94dvh);margin-top:max(3dvh,0px);border-radius:28px;border:1px solid #2e1f35}}
+.top{position:absolute;top:0;left:0;right:0;z-index:5;padding:max(12px,env(safe-area-inset-top)) 16px 0;pointer-events:none}
+.bar{height:3px;background:#3a2840;border-radius:2px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--pink);transition:width .3s}
+.meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12px;color:var(--siva)}
+.meta button{pointer-events:auto;background:none;border:0;color:var(--siva);font:inherit;font-size:12px;cursor:pointer;padding:4px 0}
+.stage{position:absolute;inset:0;cursor:pointer}
+.scr{position:absolute;inset:0;padding:78px 24px 40px;display:flex;flex-direction:column;animation:fadeIn .35s ease}
+.scr.center{justify-content:center;align-items:center;text-align:center}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.h{font-family:'Bricolage Grotesque',sans-serif;font-weight:700}
+.logo{font-family:'Pacifico',cursive;color:var(--pink)}
+.narr{font-style:italic;color:var(--siva);font-size:15px;line-height:1.55;margin:0 0 18px}
+.ln{margin:0 0 16px;animation:lineIn .4s ease both}
+.ln p{font-size:16.5px;line-height:1.5}
+.nm{display:inline-block;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:12.5px;padding:2px 10px;border-radius:20px;margin:0 0 4px}
+.dir{font-style:italic;color:var(--siva);font-size:15px;line-height:1.5}
+@keyframes lineIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.conf{background:var(--ponoc)}
+.conf .lab{font-size:12px;letter-spacing:2.5px;color:var(--pink)}
+.conf .q{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:23px;line-height:1.38;margin-top:auto;margin-bottom:auto;animation:lineIn .6s ease both}
+.tag{align-self:flex-start;margin-left:-24px;border-left:4px solid var(--pink);background:var(--sljiva);padding:8px 18px 8px 16px;margin-bottom:24px;animation:slideR .5s .3s ease both}
+@keyframes slideR{from{transform:translateX(-100%)}to{transform:none}}
+.msg{background:var(--sljiva);border-radius:18px;overflow:hidden;width:100%;animation:pop .5s cubic-bezier(.2,1.6,.4,1) both}
+.msg .hd{border-top:4px solid var(--sunce);padding:12px 16px 0;font-size:12.5px;color:var(--sunce);font-weight:500;display:flex;gap:8px;align-items:center}
+.msg .bd{padding:8px 16px 16px}
+.msg .bd b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:22px;margin-bottom:6px}
+.msg .bd p{font-size:16px;line-height:1.5;color:#E0CFD8}
+@keyframes pop{0%{transform:translateY(-40px) scale(.9);opacity:0}100%{transform:none;opacity:1}}
+.card{border:7px solid var(--pink);border-radius:16px;background:var(--sljiva);padding:12px;width:100%;animation:cardIn .6s ease both}
+@keyframes cardIn{from{transform:rotateY(90deg) scale(.9);opacity:0}to{transform:none;opacity:1}}
+.card .art{height:170px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:64px;margin:8px 0}
+.card .ty{font-size:12.5px;font-weight:500;padding:5px 0;border-top:1px solid #4a3352;border-bottom:1px solid #4a3352;margin-bottom:10px}
+.card .ab{font-size:14px;line-height:1.5;margin-bottom:10px}
+.card .fl{font-size:14px;font-style:italic;color:var(--siva)}
+.card .pt{text-align:right;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;color:var(--koralj);margin-top:6px}
+.big .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1.08;animation:slam .55s cubic-bezier(.2,1.4,.4,1) both}
+.big .s{font-size:16px;color:var(--siva);margin-top:18px;line-height:1.5;animation:fadeIn .5s .5s both}
+@keyframes slam{0%{transform:scale(2.6);opacity:0}60%{transform:scale(.94);opacity:1}100%{transform:scale(1)}}
+.shake{animation:shake .5s .45s both}
+@keyframes shake{0%,100%{transform:none}20%{transform:translate(-6px,3px)}40%{transform:translate(5px,-4px)}60%{transform:translate(-4px,-2px)}80%{transform:translate(3px,4px)}}
+.ttl .ep{background:var(--sljiva);color:#FFB3CC;font-size:13px;font-weight:500;padding:5px 14px;border-radius:20px;animation:fadeIn .5s .5s both}
+.ttl .nm2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:32px;line-height:1.15;margin-top:16px;animation:slam .6s .8s both}
+.hint{position:absolute;bottom:max(18px,env(safe-area-inset-bottom));left:0;right:0;text-align:center;font-size:12.5px;color:var(--siva);animation:fadeIn .5s 1.2s both;pointer-events:none}
+.ep-list p{font-size:15px;line-height:1.5;margin-bottom:12px;animation:lineIn .4s ease both}
+.d1{animation-delay:.15s!important}.d2{animation-delay:.3s!important}.d3{animation-delay:.45s!important}.d4{animation-delay:.6s!important}.d5{animation-delay:.75s!important}.d6{animation-delay:.9s!important}.d7{animation-delay:1.05s!important}
+.warn{background:#000}
+.warn .w1{color:var(--sunce);font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:4px;font-size:22px;animation:blink 1s steps(2) 3}
+.warn p{font-size:17px;line-height:1.5;margin-top:22px;opacity:0;animation:fadeIn .6s both}
+@keyframes blink{50%{opacity:0}}
+.prod .row{display:flex;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:38px;letter-spacing:2px}
+.prod .row span{display:inline-block;opacity:0;animation:drop .5s cubic-bezier(.2,1.6,.4,1) both}
+.prod .row.up span{animation-name:rise}
+@keyframes drop{from{transform:translateY(-120px);opacity:0}to{transform:none;opacity:1}}
+@keyframes rise{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
+.prod .pr{font-family:'Pacifico',cursive;color:var(--pink);font-size:24px;margin-top:20px;opacity:0;animation:fadeIn .8s 2.4s both}
+.prod .wrap{animation:shake .6s 2s both, zoom 6s 2.6s ease-out both}
+@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.12)}}
+.spot{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,92,147,.18),transparent 70%);animation:sweep 3s ease-in-out infinite alternate;pointer-events:none}
+@keyframes sweep{from{transform:translate(-120px,-60px)}to{transform:translate(120px,60px)}}
+.feet{display:flex;gap:14px;justify-content:center;font-size:30px;height:44px;margin-bottom:26px}
+.feet span{opacity:0;animation:step .3s both}
+.feet span:nth-child(odd){transform:translateY(10px)}
+@keyframes step{from{opacity:0;scale:1.6}to{opacity:1;scale:1}}
+.spons .sm{font-size:13px;letter-spacing:3px;color:var(--siva);margin-bottom:18px;animation:fadeIn .6s both}
+.spons .nm3{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;line-height:1.1;color:var(--koralj);animation:slam .6s 1.8s both}
+.spons .tl{margin-top:18px;font-style:italic;color:var(--siva);animation:fadeIn .6s 2.6s both}
+.quiz .pb{width:100%;height:10px;background:#3a2840;border-radius:6px;overflow:hidden;margin:26px 0 10px}
+.quiz .pb i{display:block;height:100%;width:0;background:var(--pink);animation:fill 3s cubic-bezier(.3,.8,.4,1) .4s forwards}
+@keyframes fill{to{width:99%}}
+.quiz .pc{font-size:13px;color:var(--siva)}
+.quiz .lie{margin-top:40px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;color:#FF4D4D;opacity:0;animation:glitch .9s 4.4s both}
+.quiz .zap{margin-top:18px;font-size:16px;color:var(--siva);opacity:0;animation:fadeIn .5s 3.8s both}
+@keyframes glitch{0%{opacity:0;transform:skewX(40deg)}20%{opacity:1;transform:skewX(-30deg) translateX(-10px)}40%{transform:skewX(20deg) translateX(8px);color:#5cf}60%{transform:skewX(-10deg);color:#FF4D4D}100%{opacity:1;transform:none}}
+.lg .heart{font-size:54px;color:var(--pink);animation:beat 1.1s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+.lg .l1{font-family:'Pacifico',cursive;font-size:56px;color:var(--pink);line-height:1.2;animation:slam .8s .3s both}
+.lg .l2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:18px;color:var(--koralj);animation:spread 1.4s 1s both}
+@keyframes spread{from{letter-spacing:0;opacity:0}to{letter-spacing:12px;opacity:1}}
+.lg .l3{margin-top:40px;font-size:14px;color:var(--siva);animation:fadeIn .6s 2s both}
+.credits{overflow:hidden;padding-top:0;padding-bottom:0}
+.roll{animation:roll 32s linear both;text-align:center;padding-top:100dvh}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(-100%)}}
+.roll .r{margin-bottom:22px}
+.roll .r small{display:block;font-size:12px;letter-spacing:2px;color:var(--siva);text-transform:uppercase;margin-bottom:3px}
+.roll .r span{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:19px}
+.again{pointer-events:auto;margin-top:34px;background:var(--pink);color:#2a0716;border:0;border-radius:24px;padding:12px 26px;font:700 15px 'Bricolage Grotesque',sans-serif;cursor:pointer;animation:fadeIn .6s 1.6s both}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<div class="top"><div class="bar"><i id="prog" style="width:0"></i></div>
+<div class="meta"><span id="lbl"></span><button id="restart" aria-label="Ispočetka">↺ ispočetka</button></div></div>
+<div class="stage" id="stage"></div>
+</div>
+<script>
+const C={
+"Nina":"#B79BFF","Antun":"#FF7EB6","Luka":"#FFB25C","Jona":"#5FB0FF","Leko":"#8FE3D0","Cole":"#8FE3D0","Perić":"#A6E07A","Matej":"#6FD3FF",
+"Salak":"#D9C27A","Marta":"#FFC2D6","Helena":"#FFAA8F","Lara":"#FFAA8F","Danijela":"#FF6B6B","Veronika":"#E59BFF","Sara":"#9AA8FF","Kiara":"#F2D16B","Lana":"#7FD8F5","Stvorenje":"#9BE37A","Žena od zvijezda":"#FFC93C","Damjan":"#8FE3D0","Sabina":"#B8C4CC",
+"Producent":"#FFC93C","Sestra Danijela":"#FF6B6B","Svi":"#F4E8EE"};
+const S=[
+{t:"warn"},
+{t:"prod"},
+{t:"spons"},
+{t:"traubi"},
+{t:"quiz"},
+{t:"logo"},
+
+{t:"narr",x:"Svi znaju tko su bili u vili. Nitko ne zna tko su bili prije."},
+{t:"narr",x:"Šest Otočana. Šest porijekla. Šest žanrova. Nula provjerenih činjenica."},
+
+{t:"genre",w:"Matej",g:"Epska origin priča",n:"Čovjek s trapeza"},
+{t:"narr",x:"Prije čaja. Prije Boeinga. Prije vile. Postojao je samo crveni šator."},
+{t:"scene",l:[["","Cirkus. Reflektor. Dječak u zelenom odijelu leti s trapeza na trapez."],["Publika","MA-TEJ! MA-TEJ!"],["","Trostruki salto. Savršeno slijetanje. Pilotu nitko nikad ne pljesne. Njemu pljesnu svi."]]},
+{t:"conf",w:"Matej",q:"Bio sam najbolji na trapezu. Ali kad sam visio naglavačke, gledao sam kroz rupu na vrhu šatora. U zvijezde. Trapez me nije ispunjavao. Zvijezde jesu."},
+{t:"scene",l:[["","Noću, dok cirkus spava, Matej pod svijećom čita. Newton. Kepler. Diferencijalni račun."],["Klaun","Mali, što to čitaš?"],["Matej","Zašto stvari padaju."],["Klaun","Pa ti nikad ne padaš."],["Matej","Upravo zato želim znati."]]},
+{t:"big",x:"POŽAR.",s:"Jedne noći crveni šator je izgorio. Ostali su samo Matej i njegove knjige.",sh:1},
+{t:"scene",l:[["","Pepeo. Tišina. Matej drži udžbenik mehanike. Rubovi su pougljenili. Formule su preživjele."],["Matej","(tiho) Zakon očuvanja energije. Ništa ne nestaje. Samo mijenja oblik."]]},
+{t:"scene",l:[["","Obitelj pravnika Miličević. Velika kuća. Puno knjiga. Nijedna o trapezu."],["Gospođa Miličević","Mateju, želiš li čaj?"],["","Matej prvi put proba čaj. Nešto u njemu klikne. Zauvijek."],["Matej","APSOLUTNO."]]},
+{t:"scene",l:[["","Zrakoplovno inženjerstvo. Najmlađi student na faksu. Prvi dan. Netko mu sjedne do njega."],["Luka","Buraz, jesi ti ovdje greškom ili si genij?"],["Matej","Oboje je statistički moguće."],["Luka","Autism in children. Ja sam Luka, računarstvo. Igraš D&D?"]]},
+{t:"scene",l:[["","Tako je nastala družina. Luka. Jona i Leko s Warhammer turnira. Kasnije Perić, koji nije znao pravila, ali je donio grickalice."],["Perić","Što ćemo igrati?"],["Svi","Sve."]]},
+{t:"conf",w:"Matej",q:"Ovo su bili moji prijatelji. Bili smo nezaustavljivi u matematici, fizici i bacanju d20. Ali tko zna koga ću još upoznati da mi promijeni život zauvijek…"},
+{t:"big",x:"Negdje u Požegi…",s:"…jedan glumac po treći put uvježbava svoj ulaz."},
+
+{t:"genre",w:"Sara",g:"Gotički horor",n:"Kći Traubisode"},
+{t:"narr",x:"Mađarska. Olujna noć. Laboratorij u podrumu. Na policama zveckaju boce."},
+{t:"scene",l:[["","Sara u bijeloj kuti. Šminka: ljubičasti eyeliner, zelene sjene, šljokice. Munja osvijetli stol."],["Sara","Večeras… stvaram život."],["","Na stolu leži tijelo od dijelova. Ruke košarkaša. Mozak šahista. Srce… punjeno Traubisodom."]]},
+{t:"big",x:"ŽIVO JE!",s:"Stvorenje otvori oči. Prve riječi: „Nije vino.“",sh:1},
+{t:"scene",l:[["Stvorenje","Nije vino… nije voda…"],["Sara","(plače od sreće) …to je Traubisoda."],["","Sara je stvorila savršenog propagandista. Ili je ona postala jedan. Nitko ne zna gdje prestaje Sara, a počinje Traubisoda."]]},
+{t:"scene",l:[["","Ponoć. Laboratorij. Nešto zuji."],["Sara","…što je to?"],["","Na zidu: buba. Mala. Smeđa. Nije bubamara. Nije leptir."],["","Sara vrisne. Stvorenje vrisne. Munja vrisne."],["","Sara pobjegne. Stvorenje ostane s bubom. Stvorenje je, kako se pokazalo, hrabrije od svoje stvoriteljice."]]},
+{t:"scene",l:[["","Na prozor sleti leptir. Ogroman. Veličine dlana."],["Sara","Ne. Ne, ne, ne. Leptiri su okej samo dok su mali."],["","Sara pobjegne i od leptira. Ostanu samo bubamare. Bubamare su dobrodošle. Bubamare imaju točkice."]]},
+{t:"scene",l:[["","Jutro. Sara pokazuje Stvorenju slike."],["Sara","Ovo je moj pas. I ovo. Ovdje spava. Ovdje isto spava. Ovdje gleda u daljinu. Ovo je moj pas iz profila."],["Stvorenje","…ima li još?"],["Sara","Četiri tisuće tristo dvanaest."],["","Stvorenje je pogledalo sve. Stvorenje ima vremena. Stvorenje je besmrtno."]]},
+{t:"scene",l:[["","Navečer Stvorenje pita: „Gdje je tvoj otac?“"],["","Sara malo šuti. Popravi mu šav na ramenu. Pažljivo."],["Sara","Nije bitno. Bitno je da ti imaš nekoga tko ti popravi šavove."],["","Više nije rekla ništa. Stvorenje nije pitalo dalje. Stvorenje je pametnije nego što izgleda."]]},
+{t:"conf",w:"Sara",q:"Mary Shelley je napisala Frankensteina kao tinejdžerica. Ja sam kao tinejdžerica izmislila Traubisoda marketing. Usporedite sami."},
+{t:"big",x:"Nije vino. Nije voda.",s:"To je porijeklo."},
+
+{t:"genre",w:"Sabina",g:"Špijunski triler",n:"Operacija: Autobus"},
+{t:"narr",x:"Svi misle da Sabina ne radi ništa. Da joj se ne da. Da samo sjedi. To je savršena maska."},
+{t:"scene",l:[["","5:40 ujutro. Autobusni kolodvor. Sabina u sunčanim naočalama i kapuljači. Nonšalantno."],["Instruktor","Kandidatkinja Sabina?"],["Sabina","Ne znam o kome pričate."],["Instruktor","Na popisu piše Sabina. Kategorija D."],["Sabina","…a brate. Ajde."]]},
+{t:"scene",l:[["","Sabina sjedne za volan. Autobus. Dvanaest metara. Pedeset jedno sjedalo."],["Instruktor","Jeste li ikad vozili ovako nešto?"],["Sabina","Ne."],["","Sabina iz prve parkira unatrag. Savršeno. Instruktoru ispadne olovka."]]},
+{t:"big",x:"NITKO NE SMIJE ZNATI.",s:"Ni komuna. Ni Danijela. Pogotovo ne Danijela."},
+{t:"scene",l:[["","Isti dan, poslije škole. Ekipa."],["Danijela","Pile, gdje si bila jutros?"],["Sabina","Spavala."],["Danijela","U pola šest?"],["Sabina","Spavam rano. A brate, šta misliš."],["","Sabina zijevne. Nonšalantno. Previše nonšalantno. Danijela suzi oči."]]},
+{t:"scene",l:[["","Grupni chat. Netko pošalje sliku autobusa koji prolazi pored škole."],["Luka","Buraz, je l' to Sabina za volanom??"],["Sabina","Ne."],["Luka","Ima tvoje naočale."],["Sabina","Puno ljudi ima naočale. Nisam jedina osoba s licem."],["Nina","Na snimci se čuje golub."]]},
+{t:"scene",l:[["","Sabini stigne razglednica. Od Kiare."],["","„Sabina, moram ti nešto priznati. Otišla sam iz vile jer sam zaljubljena u Jonu. Ja slavim Hanuku, on Božić. Moja baka bi se onesvijestila. Njegova bi se onesvijestila pa pomolila. Čuvaj tiramisu. K.“"],["Sabina","…a brate."]]},
+{t:"scene",l:[["","Sabina pokaže razglednicu Joni."],["Jona","(dugo čita) …mogli bismo slaviti oboje?"],["","Jona ode u kapelicu. Moli se dva sata. Izađe s papirom: „Hanuka 8 dana. Božić 1 dan. Ukupno 9 dana slavlja. Prihvaćam.“"]]},
+{t:"scene",l:[["","Dan ispita. Sabina položi. Kategorija D. Izađe iz autobusa. Nonšalantno."],["","Na stanici čeka cura. Kosa kao iz reklame za šampon. U ruci karta."],["Lana","Oprostite, vozi li ovaj autobus za Osijek?"],["","Sabina pogleda nju. Pa autobus. Pa opet nju."],["Sabina","…sad vozi."]]},
+{t:"card",w:"Lana",ty:"Putnica · Bomba školjka 2.0",ab:"Kupila je kartu u jednom smjeru. Sabina je promijenila rutu.",fl:"„Je l' ovo redovna linija?“ „Od danas.“",pt:"D/D"},
+{t:"scene",l:[["","Za to vrijeme, u kuhinji komune."],["Veronika","Ja sam mama ove ekipe."],["Marta","Ne, ja sam mama ove ekipe."],["Veronika","Ja vičem na njih."],["Marta","Ja ih grlim."],["","Ulazi Salak. Nosi lonac juhe. Svima je već izmjerio temperaturu. Nikome nije rekao."],["Salak","Jeste li jeli? Obucite se, puše."]]},
+{t:"big",x:"…on je mama.",s:"Veronika i Marta, uglas. Rat je završen. Pobijedila je juha."},
+{t:"conf",w:"Sabina",q:"Položila sam za autobus. Nitko ne zna. Ako netko pita, samo sam spavala. Trideset sati vožnje. Spavala."},
+{t:"big",x:"Sabina vozi.",s:"Nonšalantno."},
+
+{t:"genre",w:"Veronika",g:"Mistična bajka",n:"Proročica s pivom"},
+{t:"narr",x:"Na početku ne bijaše ništa. Samo tama, tišina i jedan zvuk: pssst. Otvaranje limenke."},
+{t:"scene",l:[["","Iz magle izađe Veronika. Odmah s pivom u ruci. Rođena s pivom. Nitko ne zna odakle pivo."],["Veronika","Dobro jutro, svijete."],["","Svijet je bio zbunjen. Bilo je tri popodne."]]},
+{t:"scene",l:[["","Prvo što je napravila: promiješala tarot."],["","Prva karta: Mjesec. Druga: Zvijezda. Treća: Krevet."],["Veronika","U tarotu nema karte Krevet."],["","Karta Krevet se ne slaže. Karta Krevet je u pravu."],["","Veronika spava jedanaest sati."]]},
+{t:"scene",l:[["","Probudi se. Oko nje su djeca. Luka. Matej. Antun. Nina."],["Veronika","DJECO! Zašto ste bosi? Odakle ova mrvica? TKO JE OSTAVIO BOCU? POVRATNA AMBALAŽA!"],["Luka","Mi nismo tvoja djeca."],["Veronika","Upravo zato smijem vikati na vas."],["","Logika je bila neoboriva. Čak je i Jona priznao da nije strawman."]]},
+{t:"scene",l:[["","Puš pauza. Veronika sjedi na rubu svijeta. Do nje sjedne žena od zvijezda. Doslovno. Svijetli."],["Žena od zvijezda","Želiš li znati svoju sudbinu?"],["Veronika","Ako je kratka."],["Žena od zvijezda","Bit ćeš majka svima. I smjet ćeš vikati na sve."],["Veronika","…to je najljepša sudbina koju sam čula."],["Žena od zvijezda","Imaš upaljač?"]]},
+{t:"conf",w:"Veronika",q:"Tarot, žene, puš pauze i spavanje. To je moj sveti četverokut. Sve ostalo je buka. Ovo me plaši. Ali samo malo."},
+{t:"big",x:"Svi su njena djeca.",s:"Nitko nije pitao. Nitko ne smije pitati."},
+
+{t:"genre",w:"Danijela",g:"Melodrama",n:"Suze i tiramisu"},
+{t:"narr",x:"Kišna večer. Kazalište. Na audiciji plače djevojka. Nije to uloga. Samo plače. Takva je."},
+{t:"scene",l:[["Redatelj","Sljedeća. Ime?"],["Danijela","Danijela. Dani. Pile, mogu li sjesti?"],["","Dani sjedne. Pa se okrene na stolici. Pa prebaci noge preko naslona. Pa sjedne naopako."],["Redatelj","Može li se sjediti normalno?"],["Danijela","Ne mogu, sunce. Nikad nisam mogla."]]},
+{t:"scene",l:[["Redatelj","Monolog, molim."],["","Dani otvori usta. Plače prije prve riječi."],["Redatelj","Još nisi ni počela."],["Danijela","Znam, ljubavi. Ovo je samo zagrijavanje."],["","Redatelj je dirnut. Ne zna čime. Ne zna ni ona."]]},
+{t:"big",x:"GLUMA ILI POLITOLOGIJA?",s:"Pred Dani su dvije prijavnice. Na obje piše „budućnost: propala“. Nije sigurna koja je gora."},
+{t:"scene",l:[["Danijela","Ako postanem glumica, propast ću na pozornici."],["Danijela","Ako postanem politologinja, propast ću na televiziji."],["Danijela","…barem ću u oba slučaja dobro izgledati."]]},
+{t:"scene",l:[["","Noć. Dani vozi sama. Besprijekorno. Svaki zavoj, svaki semafor."],["","Na suvozačevom sjedalu nitko ne sjedi. Ali ona ponekad svejedno pogleda tamo."],["","Na crvenom, dok čeka, tiho kaže: „Vidiš kako vozim?“"],["","Zeleno. Krene. Savršeno, kao i uvijek."]]},
+{t:"scene",l:[["","Nedjelja. Dani radi tiramisu. Mascarpone, kava, kakao."],["Danijela","Ovo je za Ninu. Za Martu. Za Veroniku. Za Sabinu. Za Helenu. Za Saru."],["Luka","A za mene?"],["Danijela","Ti me zoveš ginger, pile. Ti dobiješ samo kakao."],["Antun","A ja?"],["Danijela","Ti duplu porciju, sunce. Ti si moja ljubav 🤗"]]},
+{t:"conf",w:"Danijela",q:"Plačem na filmove. Na reklame. Na tiramisu kad uspije. Na tiramisu kad ne uspije. To nije slabost, ljubavi. To je hidratacija."},
+{t:"big",x:"Dani.",s:"Propala glumica. Ili politologinja. U svakom slučaju odlična vozačica."},
+
+{t:"genre",w:"Helena",g:"Mjuzikl",n:"Helena! (s uskličnikom)"},
+{t:"narr",x:"Svaki mjuzikl počinje pjesmom. Ovaj počinje sendvičem."},
+{t:"scene",l:[["","Kuhinja. Helena otvori hladnjak. Svjetlo iz hladnjaka padne na nju kao reflektor."],["Helena","(pjeva) Ooo, hladnjače mooooj…"],["","Iza nje se pojave plesači. Nitko ne zna odakle. Nose kobasice."]]},
+{t:"scene",l:[["Helena","(pjeva) Jedem kad sam sretna, jedem kad sam tužna…"],["Plesači","(zbor) Jede kad je fino! Jede kad je ružno!"],["Helena","(pjeva) Ja ne jedem puno… ja jedem dosljedno!"],["","Plesači ostanu bez teksta. Nije bilo rime. Bilo je samo istine."]]},
+{t:"big",x:"PLESNI BROJ.",s:"Helena pleše po cijeloj kuhinji. Usput pojede tri palačinke. Nijednu nije ispustila. Koreografija je to zahtijevala."},
+{t:"scene",l:[["","Usred pjesme Helena stane."],["Helena","Čekajte. Kako se zove smiješni kakao?"],["Plesači","…"],["Helena","Ha-ha-o."],["","Glazba se ugasi. Jedan plesač ode kući. Helena nastavi pjevati sama. Takva je. Friki."]]},
+{t:"scene",l:[["Redatelj","Ime za plakat?"],["Helena","Lara."],["Redatelj","Ti si Helena."],["Helena","Za plakat sam Lara. Za hranu Helena."]]},
+{t:"scene",l:[["","Finale. Helena izvadi bocu bez etikete."],["Helena","Za kraj, svi po jednu."],["","Cijeli ansambl popije. Cijeli ansambl zapjeva. Nitko više ne zna tekst. Nitko ne zna ni svoje ime."],["Helena","(pjeva, zadnji ton) …i dooo kraaajaaa… je li ostalo još sendviča?"]]},
+{t:"big",x:"HELENA!",s:"S uskličnikom. Zastor. Svi jedu."},
+
+{t:"big",x:"Nedostaje još osam porijekla.",s:"Antun, Luka, Jona, Leko, Perić, Nina, Marta i Salak. Pošaljite backstoryje. Ili ćemo ih izmisliti."},
+{t:"credits"},
+{t:"spons",out:1},
+{t:"end"}
+];
+
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const col=w=>C[w]||"#F4E8EE";
+const pill=w=>`<span class="nm" style="background:${col(w)}22;color:${col(w)}">${esc(w)}</span>`;
+const word=(t,cls)=>[...t].map((ch,i)=>`<span style="animation-delay:${(i*0.07).toFixed(2)}s">${ch===" "?"&nbsp;":esc(ch)}</span>`).join("");
+
+function render(s){
+ switch(s.t){
+ case "warn":return `<div class="scr center warn"><div class="w1">UPOZORENJE</div>
+ <p style="animation-delay:.9s">Ovo nije Love Island.</p>
+ <p style="animation-delay:2.4s">Ponavljamo: ovo NIJE Love Island.</p>
+ <p style="animation-delay:3.6s">Vila je zatvorena. Ambalaža je vraćena.</p></div><div class="hint">tapni desno za dalje →</div>`;
+ case "prod":return `<div class="scr center prod"><div class="spot"></div><div class="wrap">
+ <div class="row">${word("KOMUNALNA")}</div><div class="row up">${word("PRODUKCIJA").replace(/animation-delay:([\d.]+)s/g,(m,d)=>"animation-delay:"+(+d+0.8).toFixed(2)+"s")}</div>
+ <div class="pr">predstavlja nešto novo</div></div></div>`;
+ case "spons":{
+  const feet=[0,1,2,3,4].map(i=>`<span style="animation-delay:${(0.3+i*0.28).toFixed(2)}s">👣</span>`).join("");
+  const top=s.ad?"REKLAMA":(s.out?"VIDIMO SE · UZ POTPORU SPONZORA":"UZ POTPORU SPONZORA");
+  const tl=s.ad===1?"Svaka boca se računa. Pitajte Saru.":s.ad===2?"Sada i s regeneratorom. Upitajte Luku.":s.out?"Nijedno porijeklo nije provjereno. Nijedno.":"Jer u komuni je sve zajedničko. Sve.";
+  return `<div class="scr center spons"><div class="sm">${top}</div><div class="feet">${feet}</div>
+  <div class="nm3">MARTINA<br>(KOMUNALNA)<br>STOPALA</div><div class="tl">${tl}</div></div>`;}
+ case "traubi":return `<div class="scr center spons"><div class="sm">I SU-SPONZOR</div>
+ <div class="nm3" style="color:#B79BFF">TRAUBISODA</div><div class="tl">Nije vino. Nije voda.</div>
+ <div class="tl" style="animation-delay:3.4s;font-style:normal;font-weight:700;color:var(--krem)">To je Traubisoda.</div></div>`;
+ case "quiz":return `<div class="scr center quiz"><p class="h" style="font-size:22px;line-height:1.3">Vaša porijekla su zaprimljena.</p>
+ <div class="pb"><i></i></div><div class="pc">Provjeravamo činjenice…</div>
+ <div class="zap">Zapravo…</div><div class="lie">POLA STE IZMISLILI.</div></div>`;
+ case "logo":return `<div class="scr center lg"><div class="heart">♥</div><div class="l1">Prije vile</div><div class="l2">PORIJEKLA</div>
+ <div class="l3">Sezona 3 · prvi dio · šest žanrova</div></div><div class="hint">tapni za početak</div>`;
+ case "title":return `<div class="scr center ttl"><div class="logo" style="font-size:30px;animation:fadeIn .5s both">Love Island</div>
+ <div class="h" style="letter-spacing:6px;color:var(--koralj);font-size:13px;margin:2px 0 40px">ADRIA</div>
+ <span class="ep">Epizoda ${s.ep}</span><div class="nm2">${esc(s.n)}</div></div>`;
+ case "genre":return `<div class="scr center ttl"><div class="logo" style="font-size:28px;animation:fadeIn .5s both">Prije vile</div>
+ <div class="h" style="letter-spacing:6px;color:var(--koralj);font-size:13px;margin:2px 0 40px">PORIJEKLA</div>
+ <span class="ep">${esc(s.g)}</span><div class="nm2" style="color:${col(s.w)}">${esc(s.w)}</div>
+ <p class="narr" style="margin-top:16px;font-size:18px;animation:fadeIn .6s 1.4s both">„${esc(s.n)}“</p></div>`;
+ case "narr":return `<div class="scr center"><p class="narr" style="font-size:19px;line-height:1.55">${esc(s.x)}</p></div>`;
+ case "scene":return `<div class="scr">${s.l.map((l,i)=>l[0]?`<div class="ln" style="animation-delay:${i*0.18}s">${pill(l[0])}<p>${esc(l[1])}</p></div>`:`<div class="ln" style="animation-delay:${i*0.18}s"><p class="dir">${esc(l[1])}</p></div>`).join("")}</div>`;
+ case "conf":return `<div class="scr conf"><p class="lab">🎙 ISPOVJEDAONICA</p><p class="q">„${esc(s.q)}“</p>
+ <div class="tag"><span class="h" style="font-size:17px;color:${col(s.w)}">${esc(s.w)}${s.w==="Lara"?" (?)":""}</span></div></div>`;
+ case "msg":return `<div class="scr center"><div class="msg"><div class="hd">💬 Love Island Adria · sada</div>
+ <div class="bd" style="text-align:left"><b>${esc(s.b)}</b><p>${esc(s.x)}</p></div></div></div>`;
+ case "card":return `<div class="scr center"><div class="card" style="text-align:left;border-color:${col(s.w)}">
+ <div style="display:flex;justify-content:space-between;align-items:center"><span class="h" style="font-size:19px">${esc(s.w)}</span><span style="color:${col(s.w)}">♥</span></div>
+ <div class="art" style="background:${col(s.w)}22;color:${col(s.w)}">${esc(s.w[0])}</div>
+ <div class="ty" style="color:${col(s.w)}">${esc(s.ty)}</div><div class="ab">${esc(s.ab)}</div><div class="fl">${esc(s.fl)}</div><div class="pt">${esc(s.pt)}</div></div></div>`;
+ case "big":return `<div class="scr center big"><div class="${s.sh?"shake":""}"><div class="t">${esc(s.x)}</div></div><div class="s">${esc(s.s||"")}</div></div>`;
+ case "list":return `<div class="scr ep-list"><p class="h" style="font-size:24px;color:var(--pink);margin-bottom:22px">${esc(s.h)}</p>${s.l.map((x,i)=>`<p class="d${Math.min(i+1,7)}">${esc(x)}</p>`).join("")}</div>`;
+ case "credits":{
+  const R=[["Režija","Komuna"],["Scenarij","sami Otočani (nažalost)"],["Cirkus i trapez","Matej"],["Laboratorij","Sara"],["Stvorenje","Traubisoda"],["Kategorija D","Sabina (nitko ne zna)"],["Putnica","Lana"],["Razglednica","Kiara"],["Teologija slavlja","Jona (9 dana)"],["Tarot i karta Krevet","Veronika"],["Žena od zvijezda","nepoznato, imala je upaljač"],["Suze","Dani (hidratacija)"],["Tiramisu","Dani"],["Vozačica","Dani"],["Hladnjak","Helena"],["Plesači s kobasicama","nitko ne zna odakle"],["Prava mama","Salak"],["Juha","Salak"],["Posebna zahvala","svima koji su poslali backstory 🫰"]];
+  return `<div class="scr credits"><div class="roll"><p class="logo" style="font-size:40px;margin-bottom:40px">Prije vile</p>${R.map(r=>`<div class="r"><small>${esc(r[0])}</small><span>${esc(r[1])}</span></div>`).join("")}<p class="narr" style="margin-top:40px">Svi likovi su stvarni. Porijekla su izmišljena. Uglavnom sami.</p></div></div>`;}
+ case "end":return `<div class="scr center lg"><div class="heart">♥</div><div class="big"><div class="t">KRAJ.</div></div>
+ <p class="narr" style="margin-top:22px">Drugi dio? Pošaljite backstoryje.</p><button class="again" id="again">Gledaj ispočetka</button><br><a class="again" style="display:inline-block;margin-top:14px;background:var(--sljiva);color:var(--krem);text-decoration:none" href="../sezona-2/" onclick="event.stopPropagation()">← Sezona 2</a></div>`;
+ }
+}
+
+const stage=document.getElementById("stage"),prog=document.getElementById("prog"),lbl=document.getElementById("lbl");
+const EP=[];let cur="Komunalna produkcija";S.forEach(x=>{if(x.t==="genre")cur="Porijeklo: "+x.w;if(x.t==="credits")cur="Odjavna špica";EP.push(cur)});
+let k=0;
+try{const v=parseInt(localStorage.getItem("lia3-pos"));if(v>0&&v<S.length)k=v}catch(e){}
+function show(i){
+ k=Math.max(0,Math.min(S.length-1,i));
+ stage.innerHTML=render(S[k]);
+ prog.style.width=(k/(S.length-1)*100).toFixed(1)+"%";
+ lbl.textContent=EP[k];
+ try{localStorage.setItem("lia3-pos",k)}catch(e){}
+ const a=document.getElementById("again");if(a)a.onclick=ev=>{ev.stopPropagation();show(0)};
+}
+stage.addEventListener("click",ev=>{const r=stage.getBoundingClientRect();show(ev.clientX-r.left<r.width/3?k-1:k+1)});
+document.addEventListener("keydown",ev=>{if(["ArrowRight"," ","Enter"].includes(ev.key)){ev.preventDefault();show(k+1)}if(ev.key==="ArrowLeft")show(k-1)});
+let tx=null;stage.addEventListener("touchstart",e=>{tx=e.touches[0].clientX},{passive:true});
+stage.addEventListener("touchend",e=>{if(tx===null)return;const dx=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(dx)>50){e.preventDefault();show(dx<0?k+1:k-1)}});
+document.getElementById("restart").onclick=ev=>{ev.stopPropagation();show(0)};
+show(k);
+</script>
+</body>
+</html>
